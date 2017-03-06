@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server/server.js",
     "devserve": "set NODE_ENV=development && nodemon server/server.js",
-    "devpack": "set NODE_ENV=development && webpack -w --config webpack.config.js --progress"
+    "devpack": "set NODE_ENV=development && webpack -w --config webpack.config.js --progress",
+    "deploy": "set NODE_ENV=production && webpack --config webpack.config.js && gcloud app deploy app.yaml"
   },
   "repository": {
     "type": "git",
